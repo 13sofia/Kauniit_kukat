@@ -4,17 +4,16 @@ function showSlides() {
   const slides = document.querySelectorAll('.slide');
   
   slides.forEach(slide => {
-    slide.style.display = 'none'; // Hide all slides
+    slide.style.display = 'none'; 
   });
 
   currentSlide++;
   if (currentSlide > slides.length) {
-    currentSlide = 1; // Reset to first slide
+    currentSlide = 1; 
   }
 
-  slides[currentSlide - 1].style.display = 'block'; // Show current slide
-  setTimeout(showSlides, 5000); // Change slide every 3 seconds
+  slides[currentSlide - 1].style.display = 'block'; 
+  setTimeout(showSlides, 5000); 
 }
 
-// Start the slideshow
 document.addEventListener("DOMContentLoaded", showSlides);
